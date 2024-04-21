@@ -4,9 +4,9 @@ tmpmod is a tool for temporary use of modified Go modules.
 
 ## Usage
 
-First, submit a Pull Request to the upstream repository for modification.
+First, submit a pull request to the upstream repository for modification.
 
-You have the modified branch. Now use `tmpmod`.
+So, you have the modified branch. Now use `tmpmod`.
 
 ### 1. Create a renamed branch ( `tmpmod switch` )
 
