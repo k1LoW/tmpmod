@@ -2,6 +2,7 @@ package fs
 
 import (
 	"os"
+	"path/filepath"
 	"testing"
 
 	"github.com/otiai10/copy"
@@ -34,6 +35,33 @@ func TestRenameModule(t *testing.T) {
 			}
 			if diff := golden.Check(t, update, "testdata", tt.golden, got); diff != "" {
 				t.Error(diff)
+			}
+		})
+	}
+}
+
+func TestModfileAndGoRoot(t *testing.T) {
+	tests := []struct {
+		dir  string
+		want string
+	}{
+		{".", "github.com/k1LoW/tmpmod"},
+		{"testdata", "github.com/k1LoW/tmpmod"},
+		{"testdata/a", "github.com/k1LoW/tmpmod/fs/testdata/a"},
+	}
+	for _, tt := range tests {
+		t.Run(tt.dir, func(t *testing.T) {
+			abs, err := filepath.Abs(tt.dir)
+			if err != nil {
+				t.Fatal(err)
+			}
+			m, _, err := ModfileAndGoRoot(abs)
+			if err != nil {
+				t.Fatal(err)
+			}
+			got := m.Module.Mod.Path
+			if got != tt.want {
+				t.Errorf("got %s, want %s", got, tt.want)
 			}
 		})
 	}
