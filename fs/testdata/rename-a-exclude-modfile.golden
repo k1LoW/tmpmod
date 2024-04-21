@@ -11,7 +11,7 @@ func Print() string {
 	return ulid.MustNew(uint64(time.Now().UnixNano()), nil).String()
 }
 -- go.mod --
-module github.com/my/a
+module github.com/k1LoW/tmpmod/fs/testdata/a
 
 go 1.22.2
 
