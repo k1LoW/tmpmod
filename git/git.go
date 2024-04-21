@@ -12,7 +12,7 @@ import (
 	"github.com/k1LoW/tmpmod/fs"
 )
 
-// root - returns the root directory of the git repository
+// root - returns the root directory of the git repository.
 func root() (string, error) {
 	wd, err := os.Getwd()
 	if err != nil {
@@ -29,7 +29,7 @@ func root() (string, error) {
 	}
 }
 
-// Switch - create and switch git branch
+// Switch - create and switch git branch.
 func Switch(b string) error {
 	root, err := root()
 	if err != nil {
@@ -69,7 +69,7 @@ func Switch(b string) error {
 	return nil
 }
 
-// CommitAll - commit all changes
+// CommitAll - commit all changes.
 func CommitAll() (string, error) {
 	msg := "Renamed module by tmpmod"
 	root, err := root()
@@ -94,7 +94,7 @@ func CommitAll() (string, error) {
 	return h.String(), nil
 }
 
-// Clone - clone git repository
+// Clone - clone git repository.
 func Clone(url, root string) (string, error) {
 	tmpdir := filepath.Join(root, ".tmp")
 	if _, err := os.Stat(tmpdir); err == nil {
@@ -118,6 +118,9 @@ func Clone(url, root string) (string, error) {
 		opt.SingleBranch = true
 	}
 	_, err := git.PlainClone(tmpdir, false, opt)
+	if err != nil {
+		return "", err
+	}
 	m, _, err := fs.ModfileAndGoRoot(tmpdir)
 	if err != nil {
 		return "", err

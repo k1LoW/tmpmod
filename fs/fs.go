@@ -10,7 +10,7 @@ import (
 	"golang.org/x/mod/modfile"
 )
 
-// RenameModule - rename module name in all go.mod, go.sum and go files
+// RenameModule - rename module name in all go.mod, go.sum and go files.
 func RenameModule(wd, to string, excludeModfile bool) error {
 	m, root, err := ModfileAndGoRoot(wd)
 	if err != nil {
@@ -36,7 +36,7 @@ func RenameModule(wd, to string, excludeModfile bool) error {
 			return err
 		}
 		bb := bytes.ReplaceAll(b, []byte(from), []byte(to))
-		if err := os.WriteFile(path, bb, 0644); err != nil {
+		if err := os.WriteFile(path, bb, 0644); err != nil { //nolint:gosec
 			return err
 		}
 		return nil
@@ -47,7 +47,7 @@ func RenameModule(wd, to string, excludeModfile bool) error {
 	return nil
 }
 
-// ModfileAndGoRoot - returns the parsed go.mod file and the root directory of the go module
+// ModfileAndGoRoot - returns the parsed go.mod file and the root directory of the go module.
 func ModfileAndGoRoot(wd string) (*modfile.File, string, error) {
 	for {
 		if wd == filepath.Dir(wd) {
