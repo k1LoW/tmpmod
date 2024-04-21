@@ -66,3 +66,32 @@ func TestModfileAndGoRoot(t *testing.T) {
 		})
 	}
 }
+
+func TestClenupModuleFiles(t *testing.T) {
+	tests := []struct {
+		golden string
+	}{
+		{"cleanup-a"},
+	}
+	for _, tt := range tests {
+		t.Run(tt.golden, func(t *testing.T) {
+			dir := t.TempDir()
+			if err := copy.Copy("testdata/a", dir); err != nil {
+				t.Fatal(err)
+			}
+
+			if err := CleanupModuleFiles(dir); err != nil {
+				t.Fatal(err)
+			}
+
+			got := golden.Txtar(t, dir)
+			update := false
+			if os.Getenv("UPDATE_GOLDEN") != "" {
+				update = true
+			}
+			if diff := golden.Check(t, update, "testdata", tt.golden, got); diff != "" {
+				t.Error(diff)
+			}
+		})
+	}
+}
