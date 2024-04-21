@@ -31,13 +31,14 @@ import (
 	"github.com/spf13/cobra"
 )
 
+var tmpmodRoot string
+
 var getCmd = &cobra.Command{
 	Use:   "get [REPO]",
 	Short: "get renamed module",
 	Long:  `get renamed module.`,
 	Args:  cobra.ExactArgs(1),
 	RunE: func(cmd *cobra.Command, args []string) error {
-		const tmpmodRoot = "tmpmod"
 		wd, err := os.Getwd()
 		if err != nil {
 			return err
@@ -72,4 +73,5 @@ var getCmd = &cobra.Command{
 
 func init() {
 	rootCmd.AddCommand(getCmd)
+	getCmd.Flags().StringVarP(&tmpmodRoot, "root", "", "tmpmod", "tmpmod root directory")
 }
