@@ -1,5 +1,9 @@
 # Changelog
 
+## [v0.1.0](https://github.com/k1LoW/tmpmod/compare/v0.0.2...v0.1.0) - 2024-04-21
+### Other Changes
+- Add `--root` option for root directory of tmpmod by @k1LoW in https://github.com/k1LoW/tmpmod/pull/5
+
 ## [v0.0.2](https://github.com/k1LoW/tmpmod/compare/v0.0.1...v0.0.2) - 2024-04-21
 
 ## [v0.0.1](https://github.com/k1LoW/tmpmod/commits/v0.0.1) - 2024-04-21
