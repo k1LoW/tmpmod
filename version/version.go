@@ -2,4 +2,4 @@ package version
 
 const Name string = "tmpmod"
 
-var Version = "0.0.2" //nostyle:repetition
+var Version = "0.1.0" //nostyle:repetition
