@@ -29,8 +29,8 @@ import (
 
 var rootCmd = &cobra.Command{
 	Use:   "tmpmod",
-	Short: "tmpmod is a tool for temporary use of modified modules",
-	Long:  `tmpmod is a tool for temporary use of modified modules.`,
+	Short: "tmpmod is a tool for temporary use of modified Go modules",
+	Long:  `tmpmod is a tool for temporary use of modified Go modules.`,
 }
 
 func Execute() {

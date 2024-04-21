@@ -1,6 +1,6 @@
 # tmpmod
 
-tmpmod is a tool for temporary use of modified modules.
+tmpmod is a tool for temporary use of modified Go modules.
 
 ## Usage
 
