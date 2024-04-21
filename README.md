@@ -21,7 +21,6 @@ Renaming module to github.com/k1low/greatmodule...
 Committed
 
 Usage: push renamed-github.com/k1low/greatmodule-by-tmpmod and use `go get github.com/k1low/greatmodule@f120013f64dca79ae9da1978ac6a54d780bb98e7`
-# /src/github.com/supercool/greatmodule (renamed-github.com/k1low/greatmodule-by-tmpmod)>
 # /src/github.com/supercool/greatmodule (renamed-github.com/k1low/greatmodule-by-tmpmod)> git push k1low renamed-github.com/k1low/greatmodule-by-tmpmod
 ```
 
