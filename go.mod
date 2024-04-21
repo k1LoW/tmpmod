@@ -5,7 +5,7 @@ go 1.22.2
 require (
 	github.com/go-git/go-git/v5 v5.12.0
 	github.com/spf13/cobra v1.8.0
-	golang.org/x/mod v0.12.0
+	golang.org/x/mod v0.17.0
 )
 
 require (
@@ -27,7 +27,7 @@ require (
 	github.com/spf13/pflag v1.0.5 // indirect
 	github.com/xanzy/ssh-agent v0.3.3 // indirect
 	golang.org/x/crypto v0.21.0 // indirect
-	golang.org/x/net v0.22.0 // indirect
+	golang.org/x/net v0.23.0 // indirect
 	golang.org/x/sys v0.18.0 // indirect
 	golang.org/x/tools v0.13.0 // indirect
 	gopkg.in/warnings.v0 v0.1.2 // indirect
