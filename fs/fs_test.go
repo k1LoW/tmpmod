@@ -23,8 +23,12 @@ func TestRenameModule(t *testing.T) {
 			if err := copy.Copy("testdata/a", dir); err != nil {
 				t.Fatal(err)
 			}
-
-			if err := RenameModule(dir, "github.com/my/a", tt.excludeModfile); err != nil {
+			m, root, err := ModfileAndGoRoot(dir)
+			if err != nil {
+				t.Fatal(err)
+			}
+			from := m.Module.Mod.Path
+			if err := RenameModule(root, from, "github.com/my/a", tt.excludeModfile); err != nil {
 				t.Fatal(err)
 			}
 

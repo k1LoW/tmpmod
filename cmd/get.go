@@ -31,7 +31,10 @@ import (
 	"github.com/spf13/cobra"
 )
 
-var tmpmodRoot string
+var (
+	tmpmodRoot string
+	all        bool
+)
 
 var getCmd = &cobra.Command{
 	Use:   "get [REPO]",
@@ -59,8 +62,19 @@ var getCmd = &cobra.Command{
 		}
 		as := fmt.Sprintf("%s/%s", m.Module.Mod.Path, rel)
 		cmd.Println("Renaming module to", as+"...")
-		if err := fs.RenameModule(p, as, true); err != nil {
-			return err
+		{
+			m, _, err := fs.ModfileAndGoRoot(p)
+			if err != nil {
+				return err
+			}
+			from := m.Module.Mod.Path
+			rnRoot := p
+			if all {
+				rnRoot = root
+			}
+			if err := fs.RenameModule(rnRoot, from, as, true); err != nil {
+				return err
+			}
 		}
 		cmd.Println("Cleaning up files...")
 		if err := fs.CleanupModuleFiles(p); err != nil {
@@ -80,4 +94,5 @@ var getCmd = &cobra.Command{
 func init() {
 	rootCmd.AddCommand(getCmd)
 	getCmd.Flags().StringVarP(&tmpmodRoot, "root", "", "tmpmod", "tmpmod root directory")
+	getCmd.Flags().BoolVarP(&all, "rename-all", "", false, "rename also the module path in the importing source codes")
 }

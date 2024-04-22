@@ -11,13 +11,8 @@ import (
 )
 
 // RenameModule - rename module name in all go.mod, go.sum and go files.
-func RenameModule(wd, to string, excludeModfile bool) error {
-	m, root, err := ModfileAndGoRoot(wd)
-	if err != nil {
-		return err
-	}
-	from := m.Module.Mod.Path
-	if err := filepath.WalkDir(root, func(path string, d fs.DirEntry, err error) error {
+func RenameModule(dir, from, to string, excludeModfile bool) error {
+	if err := filepath.WalkDir(dir, func(path string, d fs.DirEntry, err error) error {
 		if err != nil {
 			return err
 		}
@@ -35,8 +30,13 @@ func RenameModule(wd, to string, excludeModfile bool) error {
 		if err != nil {
 			return err
 		}
-		bb := bytes.ReplaceAll(b, []byte(from), []byte(to))
-		if err := os.WriteFile(path, bb, 0644); err != nil { //nolint:gosec
+		var replaced []byte
+		if ext == ".go" {
+			replaced = bytes.ReplaceAll(b, []byte(`"`+from), []byte(`"`+to))
+		} else {
+			replaced = bytes.ReplaceAll(b, []byte(from), []byte(to))
+		}
+		if err := os.WriteFile(path, replaced, 0644); err != nil { //nolint:gosec
 			return err
 		}
 		return nil

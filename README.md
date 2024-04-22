@@ -37,6 +37,10 @@ Usage: use `github.com/k1LoW/myproject/tmpmod/github.com/supercool/greatmodule`
 # /src/github.com/k1LoW/myproject (main)>
 ```
 
+#### `--rename-all`
+
+If you want to rename also the module path in the importing source codes, use `--rename-all`.
+
 ## Install
 
 **homebrew tap:**
