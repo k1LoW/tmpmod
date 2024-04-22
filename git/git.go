@@ -95,10 +95,10 @@ func CommitAll() (string, error) {
 }
 
 // Clone - clone git repository.
-func Clone(url, root string) (string, error) {
+func Clone(url, root string) (string, string, error) {
 	tmpdir := filepath.Join(root, ".tmp")
 	if _, err := os.Stat(tmpdir); err == nil {
-		return "", fmt.Errorf("%s already exists", tmpdir)
+		return "", "", fmt.Errorf("%s already exists", tmpdir)
 	}
 	defer os.RemoveAll(tmpdir)
 	if !strings.Contains(url, "://") {
@@ -117,20 +117,24 @@ func Clone(url, root string) (string, error) {
 		opt.ReferenceName = plumbing.NewBranchReferenceName(branch)
 		opt.SingleBranch = true
 	}
-	_, err := git.PlainClone(tmpdir, false, opt)
+	r, err := git.PlainClone(tmpdir, false, opt)
 	if err != nil {
-		return "", err
+		return "", "", err
+	}
+	ref, err := r.Head()
+	if err != nil {
+		return "", "", err
 	}
 	m, _, err := fs.ModfileAndGoRoot(tmpdir)
 	if err != nil {
-		return "", err
+		return "", "", err
 	}
 	p := filepath.Join(root, m.Module.Mod.Path)
 	if err := os.MkdirAll(filepath.Dir(p), 0755); err != nil {
-		return "", err
+		return "", "", err
 	}
 	if err := os.Rename(tmpdir, p); err != nil {
-		return "", err
+		return "", "", err
 	}
-	return p, nil
+	return p, ref.Hash().String(), nil
 }

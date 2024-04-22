@@ -45,7 +45,7 @@ var getCmd = &cobra.Command{
 		}
 		url := args[0]
 		cmd.Println("Getting", url+"...")
-		p, err := git.Clone(url, filepath.Join(wd, tmpmodRoot))
+		p, hash, err := git.Clone(url, filepath.Join(wd, tmpmodRoot))
 		if err != nil {
 			return err
 		}
@@ -62,9 +62,15 @@ var getCmd = &cobra.Command{
 		if err := fs.RenameModule(p, as, true); err != nil {
 			return err
 		}
+		cmd.Println("Cleaning up files...")
 		if err := fs.CleanupModuleFiles(p); err != nil {
 			return err
 		}
+		log := fmt.Sprintf("Use %s (%s) as %s temporarily", url, hash, as)
+		if err := os.WriteFile(filepath.Join(p, ".tmpmod.log"), []byte(log), os.ModePerm); err != nil {
+			return err
+		}
+
 		cmd.Println()
 		cmd.Printf("Usage: use `%s`\n", as)
 		return nil
