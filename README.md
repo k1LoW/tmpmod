@@ -36,3 +36,48 @@ Renaming module to github.com/k1LoW/myproject/tmpmod/github.com/supercool/greatm
 Usage: use `github.com/k1LoW/myproject/tmpmod/github.com/supercool/greatmodule`
 # /src/github.com/k1LoW/myproject (main)>
 ```
+
+## Install
+
+**homebrew tap:**
+
+```console
+$ brew install k1LoW/tap/tmpmod
+```
+
+**manually:**
+
+Download binary from [releases page](https://github.com/k1LoW/tmpmod/releases)
+
+**go install:**
+
+```console
+$ go install github.com/k1LoW/tmpmod@latest
+```
+
+**deb:**
+
+``` console
+$ export TMPMOD_VERSION=X.X.X
+$ curl -o tmpmod.deb -L https://github.com/k1LoW/tmpmod/releases/download/v$TMPMOD_VERSION/tmpmod_$TMPMOD_VERSION-1_amd64.deb
+$ dpkg -i tmpmod.deb
+```
+
+**RPM:**
+
+``` console
+$ export TMPMOD_VERSION=X.X.X
+$ yum install https://github.com/k1LoW/tmpmod/releases/download/v$TMPMOD_VERSION/tmpmod_$TMPMOD_VERSION-1_amd64.rpm
+```
+
+**apk:**
+
+``` console
+$ export TMPMOD_VERSION=X.X.X
+$ curl -o tmpmod.apk -L https://github.com/k1LoW/tmpmod/releases/download/v$TMPMOD_VERSION/tmpmod_$TMPMOD_VERSION-1_amd64.apk
+$ apk add tmpmod.apk
+```
+
+## Why not use `replace`?
+
+Because modules that use `replace` can't `go install`.
