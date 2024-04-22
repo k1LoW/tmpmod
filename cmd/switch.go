@@ -53,7 +53,12 @@ var switchCmd = &cobra.Command{
 		if err != nil {
 			return err
 		}
-		if err := fs.RenameModule(wd, as, false); err != nil {
+		m, root, err := fs.ModfileAndGoRoot(wd)
+		if err != nil {
+			return err
+		}
+		from := m.Module.Mod.Path
+		if err := fs.RenameModule(root, from, as, false); err != nil {
 			return err
 		}
 		hash, err := git.CommitAll()
