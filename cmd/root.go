@@ -24,13 +24,15 @@ package cmd
 import (
 	"os"
 
+	"github.com/k1LoW/tmpmod/version"
 	"github.com/spf13/cobra"
 )
 
 var rootCmd = &cobra.Command{
-	Use:   "tmpmod",
-	Short: "tmpmod is a tool for temporary use of modified Go modules",
-	Long:  `tmpmod is a tool for temporary use of modified Go modules.`,
+	Use:     "tmpmod",
+	Short:   "tmpmod is a tool for temporary use of modified Go modules",
+	Long:    `tmpmod is a tool for temporary use of modified Go modules.`,
+	Version: version.Version,
 }
 
 func Execute() {
