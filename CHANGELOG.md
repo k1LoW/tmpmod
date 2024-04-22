@@ -1,5 +1,9 @@
 # Changelog
 
+## [v0.3.0](https://github.com/k1LoW/tmpmod/compare/v0.2.1...v0.3.0) - 2024-04-22
+### New Features 🎉
+- Add `rename-all` for renaming all files in a project by @k1LoW in https://github.com/k1LoW/tmpmod/pull/11
+
 ## [v0.2.1](https://github.com/k1LoW/tmpmod/compare/v0.2.0...v0.2.1) - 2024-04-22
 ### Other Changes
 - Set version ( `-v` ) by @k1LoW in https://github.com/k1LoW/tmpmod/pull/10
