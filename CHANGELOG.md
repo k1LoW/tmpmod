@@ -1,5 +1,9 @@
 # Changelog
 
+## [v0.4.0](https://github.com/k1LoW/tmpmod/compare/v0.3.0...v0.4.0) - 2024-04-23
+### New Features 🎉
+- Add `revert` command to revert renamed module by @k1LoW in https://github.com/k1LoW/tmpmod/pull/13
+
 ## [v0.3.0](https://github.com/k1LoW/tmpmod/compare/v0.2.1...v0.3.0) - 2024-04-22
 ### New Features 🎉
 - Add `rename-all` for renaming all files in a project by @k1LoW in https://github.com/k1LoW/tmpmod/pull/11
