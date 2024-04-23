@@ -69,17 +69,22 @@ func ModfileAndGoRoot(wd string) (*modfile.File, string, error) {
 	}
 }
 
+const (
+	RenamedModfile = "go.mod.tmpmod"
+	RenamedGoSum   = "go.sum.tmpmod"
+)
+
 func CleanupModuleFiles(wd string) error {
 	if err := os.RemoveAll(filepath.Join(wd, ".git")); err != nil {
 		return err
 	}
 	if _, err := os.Stat(filepath.Join(wd, "go.mod")); err == nil {
-		if err := os.Rename(filepath.Join(wd, "go.mod"), filepath.Join(wd, "go.mod.tmpmod")); err != nil {
+		if err := os.Rename(filepath.Join(wd, "go.mod"), filepath.Join(wd, RenamedModfile)); err != nil {
 			return err
 		}
 	}
 	if _, err := os.Stat(filepath.Join(wd, "go.sum")); err == nil {
-		if err := os.Rename(filepath.Join(wd, "go.sum"), filepath.Join(wd, "go.sum.tmpmod")); err != nil {
+		if err := os.Rename(filepath.Join(wd, "go.sum"), filepath.Join(wd, RenamedGoSum)); err != nil {
 			return err
 		}
 	}

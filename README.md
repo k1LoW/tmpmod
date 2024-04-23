@@ -41,6 +41,17 @@ Usage: use `github.com/k1LoW/myproject/tmpmod/github.com/supercool/greatmodule`
 
 If you want to rename also the module path in the importing source codes, use `--rename-all`.
 
+#### Revert renamed module ( `tmpmod revert` )
+
+``` console
+# /src/github.com/k1LoW/myproject (main)> tmpmod revert tmpmod/github.com/supercool/greatmodule
+Getting github.com/supercool/greatmodule@fix-something...
+Reverting module from github.com/k1LoW/myproject/tmpmod/github.com/supercool/greatmodule to github.com/supercool/greatmodule...
+
+Reverted
+# /src/github.com/k1LoW/myproject (main)>
+```
+
 ## Install
 
 **homebrew tap:**
