@@ -7,7 +7,7 @@ require (
 	github.com/otiai10/copy v1.14.0
 	github.com/spf13/cobra v1.8.0
 	github.com/tenntenn/golden v0.5.4
-	golang.org/x/mod v0.17.0
+	golang.org/x/mod v0.18.0
 )
 
 require (
