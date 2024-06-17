@@ -1,5 +1,11 @@
 # Changelog
 
+## [v0.4.1](https://github.com/k1LoW/tmpmod/compare/v0.4.0...v0.4.1) - 2024-06-17
+### Other Changes
+- chore(deps): bump goreleaser/goreleaser-action from 5 to 6 in the dependencies group by @dependabot in https://github.com/k1LoW/tmpmod/pull/15
+- chore(deps): bump golang.org/x/mod from 0.17.0 to 0.18.0 in the dependencies group by @dependabot in https://github.com/k1LoW/tmpmod/pull/16
+- chore(deps): bump github.com/spf13/cobra from 1.8.0 to 1.8.1 in the dependencies group by @dependabot in https://github.com/k1LoW/tmpmod/pull/18
+
 ## [v0.4.0](https://github.com/k1LoW/tmpmod/compare/v0.3.0...v0.4.0) - 2024-04-23
 ### New Features 🎉
 - Add `revert` command to revert renamed module by @k1LoW in https://github.com/k1LoW/tmpmod/pull/13
