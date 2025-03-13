@@ -7,27 +7,28 @@ on:
   pull_request:
 
 jobs:
-  test:
+  job-test:
     name: Test
     runs-on: ubuntu-latest
     env:
       GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+    permissions:
+      contents: write
+      pull-requests: write
     steps:
       - name: Check out source code
         uses: actions/checkout@v4
 
       - name: Set up Go
-        id: setup-go
         uses: actions/setup-go@v5
         with:
           go-version-file: go.mod
-          check-latest: true
 
       - name: Run lint
         uses: reviewdog/action-golangci-lint@v2
         with:
           fail_on_error: true
-          go_version: '${{ steps.setup-go.outputs.go-version }}'
+          go_version_file: go.mod
           golangci_lint_flags: --timeout=5m
 
       - name: Run tests
