@@ -1,5 +1,9 @@
 # Changelog
 
+## [v0.4.2](https://github.com/k1LoW/tmpmod/compare/v0.4.1...v0.4.2) - 2025-03-13
+### Other Changes
+- chore(deps): bump the dependencies group across 1 directory with 3 updates by @dependabot in https://github.com/k1LoW/tmpmod/pull/27
+
 ## [v0.4.1](https://github.com/k1LoW/tmpmod/compare/v0.4.0...v0.4.1) - 2025-01-27
 ### Other Changes
 - chore(deps): bump goreleaser/goreleaser-action from 5 to 6 in the dependencies group by @dependabot in https://github.com/k1LoW/tmpmod/pull/15
