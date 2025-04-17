@@ -1,5 +1,11 @@
 # Changelog
 
+## [v0.4.2](https://github.com/k1LoW/tmpmod/compare/v0.4.1...v0.4.2) - 2025-04-17
+### Other Changes
+- chore(deps): bump the dependencies group across 1 directory with 3 updates by @dependabot in https://github.com/k1LoW/tmpmod/pull/27
+- chore(deps): bump the dependencies group across 1 directory with 3 updates by @dependabot in https://github.com/k1LoW/tmpmod/pull/32
+- chore(deps): bump golang.org/x/net from 0.36.0 to 0.38.0 by @dependabot in https://github.com/k1LoW/tmpmod/pull/34
+
 ## [v0.4.1](https://github.com/k1LoW/tmpmod/compare/v0.4.0...v0.4.1) - 2025-01-27
 ### Other Changes
 - chore(deps): bump goreleaser/goreleaser-action from 5 to 6 in the dependencies group by @dependabot in https://github.com/k1LoW/tmpmod/pull/15
