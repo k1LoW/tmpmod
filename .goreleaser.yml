@@ -61,7 +61,7 @@ nfpms:
   -
     id: tmpmod-nfpms
     file_name_template: "{{ .ProjectName }}_{{ .Version }}-1_{{ .Arch }}"
-    builds:
+    ids:
       - tmpmod-linux
     homepage: https://github.com/k1LoW/tmpmod
     maintainer: Ken'ichiro Oyama <k1lowxb@gmail.com>
