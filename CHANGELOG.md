@@ -1,5 +1,9 @@
 # Changelog
 
+## [v0.4.3](https://github.com/k1LoW/tmpmod/compare/v0.4.2...v0.4.3) - 2025-04-22
+### Other Changes
+- chore(deps): bump github.com/go-git/go-git/v5 from 5.14.0 to 5.16.0 in the dependencies group by @dependabot in https://github.com/k1LoW/tmpmod/pull/35
+
 ## [v0.4.2](https://github.com/k1LoW/tmpmod/compare/v0.4.1...v0.4.2) - 2025-04-17
 ### Other Changes
 - chore(deps): bump the dependencies group across 1 directory with 3 updates by @dependabot in https://github.com/k1LoW/tmpmod/pull/27
