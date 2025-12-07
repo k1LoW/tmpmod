@@ -5,7 +5,7 @@ go 1.24.0
 require (
 	github.com/go-git/go-git/v5 v5.16.4
 	github.com/otiai10/copy v1.14.1
-	github.com/spf13/cobra v1.10.1
+	github.com/spf13/cobra v1.10.2
 	github.com/tenntenn/golden v0.5.5
 	golang.org/x/mod v0.30.0
 )
