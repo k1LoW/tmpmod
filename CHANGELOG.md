@@ -1,5 +1,23 @@
 # Changelog
 
+## [v0.4.4](https://github.com/k1LoW/tmpmod/compare/v0.4.3...v0.4.4) - 2026-02-26
+### Other Changes
+- chore: setup tagpr labels by @k1LoW in https://github.com/k1LoW/tmpmod/pull/41
+- Revert "chore: setup tagpr labels" by @k1LoW in https://github.com/k1LoW/tmpmod/pull/43
+- chore: setup tagpr labels by @k1LoW in https://github.com/k1LoW/tmpmod/pull/44
+- chore(deps): bump the dependencies group across 1 directory with 4 updates by @dependabot[bot] in https://github.com/k1LoW/tmpmod/pull/40
+- chore(deps): bump the dependencies group across 1 directory with 2 updates by @dependabot[bot] in https://github.com/k1LoW/tmpmod/pull/39
+- chore(deps): bump the dependencies group with 2 updates by @dependabot[bot] in https://github.com/k1LoW/tmpmod/pull/45
+- chore(deps): bump golang.org/x/crypto from 0.42.0 to 0.45.0 by @dependabot[bot] in https://github.com/k1LoW/tmpmod/pull/47
+- chore(deps): bump golang.org/x/mod from 0.29.0 to 0.30.0 in the dependencies group by @dependabot[bot] in https://github.com/k1LoW/tmpmod/pull/46
+- chore(deps): bump actions/checkout from 5 to 6 in the dependencies group by @dependabot[bot] in https://github.com/k1LoW/tmpmod/pull/48
+- chore(deps): bump github.com/go-git/go-git/v5 from 5.16.3 to 5.16.4 in the dependencies group by @dependabot[bot] in https://github.com/k1LoW/tmpmod/pull/49
+- chore(deps): bump the dependencies group across 1 directory with 2 updates by @dependabot[bot] in https://github.com/k1LoW/tmpmod/pull/51
+- chore(deps): bump golang.org/x/mod from 0.31.0 to 0.32.0 in the dependencies group by @dependabot[bot] in https://github.com/k1LoW/tmpmod/pull/52
+- chore(deps): bump github.com/go-git/go-git/v5 from 5.16.4 to 5.16.5 by @dependabot[bot] in https://github.com/k1LoW/tmpmod/pull/53
+- chore(deps): bump goreleaser/goreleaser-action from 6 to 7 in the dependencies group by @dependabot[bot] in https://github.com/k1LoW/tmpmod/pull/55
+- chore(deps): bump github.com/cloudflare/circl from 1.6.1 to 1.6.3 by @dependabot[bot] in https://github.com/k1LoW/tmpmod/pull/56
+
 ## [v0.4.3](https://github.com/k1LoW/tmpmod/compare/v0.4.2...v0.4.3) - 2025-04-22
 ### Other Changes
 - chore(deps): bump github.com/go-git/go-git/v5 from 5.14.0 to 5.16.0 in the dependencies group by @dependabot in https://github.com/k1LoW/tmpmod/pull/35
