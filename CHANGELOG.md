@@ -1,5 +1,10 @@
 # Changelog
 
+## [v0.4.6](https://github.com/k1LoW/tmpmod/compare/v0.4.5...v0.4.6) - 2026-06-22
+
+### Other Changes
+- chore(deps): bump actions/checkout from 6 to 7 in the dependencies group by @dependabot[bot] in https://github.com/k1LoW/tmpmod/pull/67
+
 ## [v0.4.5](https://github.com/k1LoW/tmpmod/compare/v0.4.4...v0.4.5) - 2026-05-21
 ### Other Changes
 - chore(deps): bump golang.org/x/mod from 0.32.0 to 0.33.0 in the dependencies group by @dependabot[bot] in https://github.com/k1LoW/tmpmod/pull/54
