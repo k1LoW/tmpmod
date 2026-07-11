@@ -1,5 +1,10 @@
 # Changelog
 
+## [v0.4.7](https://github.com/k1LoW/tmpmod/compare/v0.4.6...v0.4.7) - 2026-07-11
+
+### Other Changes
+- chore(deps): bump golang.org/x/crypto from 0.51.0 to 0.52.0 by @dependabot[bot] in https://github.com/k1LoW/tmpmod/pull/72
+
 ## [v0.4.6](https://github.com/k1LoW/tmpmod/compare/v0.4.5...v0.4.6) - 2026-07-06
 
 ### Other Changes
