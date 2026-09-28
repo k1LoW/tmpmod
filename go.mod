@@ -1,6 +1,6 @@
 module github.com/k1LoW/tmpmod
 
-go 1.25.0
+go 1.26.8
 
 require (
 	github.com/go-git/go-git/v5 v5.19.1
