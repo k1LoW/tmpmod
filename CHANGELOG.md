@@ -1,5 +1,13 @@
 # Changelog
 
+## [v0.4.8](https://github.com/k1LoW/tmpmod/compare/v0.4.7...v0.4.8) - 2026-09-28
+
+### Other Changes
+- chore(deps): bump golang.org/x/mod from 0.37.0 to 0.38.0 in the dependencies group by @dependabot[bot] in https://github.com/k1LoW/tmpmod/pull/74
+- ci: generate CREDITS with gocredits v1.0.0 from a make target by @k1LoW in https://github.com/k1LoW/tmpmod/pull/81
+- chore(deps): bump the dependencies group across 1 directory with 4 updates by @dependabot[bot] in https://github.com/k1LoW/tmpmod/pull/79
+- chore(deps): bump the dependencies group across 1 directory with 2 updates by @dependabot[bot] in https://github.com/k1LoW/tmpmod/pull/80
+
 ## [v0.4.7](https://github.com/k1LoW/tmpmod/compare/v0.4.6...v0.4.7) - 2026-07-11
 
 ### Other Changes
